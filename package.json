@@ -1,0 +1,31 @@
+{
+  "name": "mobileAfp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "watch-need-help": "echo 256 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && watchman shutdown-server",
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+  },
+  "dependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.7",
+    "@babel/runtime": "7.7.7",
+    "@react-native-community/eslint-config": "0.0.5",
+    "babel-jest": "24.9.0",
+    "eslint": "6.8.0",
+    "jest": "24.9.0",
+    "metro-react-native-babel-preset": "0.56.3",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
